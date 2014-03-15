@@ -1,0 +1,56 @@
+
+<div>
+<h4><strong><%= @listing.entry %></strong> || <%= @listing.street_address %> || <a href="/<%= @listing.city.name %>/<%= @listing.neighborhood.name %>"><%= @listing.neighborhood.name %></a> || <a href="/<%= @listing.city.name %>"><%= @listing.city.name %></a></h4>
+</div>
+<div>
+<% if session[:user_id].present? %>
+    <a href="/comments/new?listing_id=<%= @listing.id %>" class="btn btn-primary btn-md">Comment</a>
+    <a href="/favorites/create?listing_id=<%= @listing.id %>" class="btn btn-primary btn-md">Add to Favorite Listings</a>
+  <% else %>
+      <a href="/login" class="btn btn-primary btn-md">Sign in to Comment or Add to Favorites.</a>
+<% end %>
+</div>
+<br>
+
+
+<div style = "padding-left: 17px">
+    <iframe
+  width="600"
+  height="400"
+  frameborder="0" style="border:0"
+  src="<%= @url %>">
+</iframe>
+</div>
+<br>
+<div id ="withborder">
+<%= @listing.long_description.html_safe %>
+</div>
+
+
+<h4><strong> USER COMMENTS </strong></h4>
+
+    <% if @comments.any? %>
+      <% @comments.each do |comment| %>
+        <div class="row review">
+          <div class="col-md-12">
+            <p><strong>
+              <%= User.find_by(:id => comment.user_id).first_name %> from <%= User.find_by(:id => comment.user_id).hometown %> said:
+            </strong></p>
+            <p><%= comment.body %></p>
+            <br>
+          </div>
+        </div>
+
+      <% end %>
+    <% else %>
+      <h4>Be the first to comment on this listing</h4>
+    <% end %>
+
+  </div>
+
+
+
+
+
+<img alt="full screen background image" src="http://www.wallpaperup.com/uploads/wallpapers/2012/07/04/5256/big_thumb_690cf657788ea89a9ecabc258a0388f1.jpg" id="full-screen-background-image" />
+      <div id="wrapper">

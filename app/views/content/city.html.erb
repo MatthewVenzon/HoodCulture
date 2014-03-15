@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+
+<body>
+    <% @city_list.each do |city| %>
+      <br>
+      <h2><strong><%= city.name %></strong></h2>
+    <% end %>
+
+    <br>
+    <br>
+
+
+    <% @neighborhood_list.each do |neighborhood| %>
+
+        <div class="col-md-12 col-md-4">
+          <a href="/<%= neighborhood.city.name %>/<%= neighborhood.name %>"
+            <div id ="opacity2" class="thumbnail borderpink">
+              <div class="hovereffects1">
+                <div class="caption">
+              <h5><%= neighborhood.name %></h5>
+              </div>
+            </div></a>
+          </div>
+    <% end %>
+
+    <% @city_list.each do |city| %>
+      <img alt="full screen background image" src=<%= city.large_image_url %> id="full-screen-background-image" />
+      <div id="wrapper">
+    <% end %>
+
+</body>

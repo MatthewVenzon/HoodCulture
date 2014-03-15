@@ -1,0 +1,31 @@
+<head>
+  <link href="jumbotron.css" rel="stylesheet">
+</head>
+
+  <body>
+    <img alt="full screen background image" src="http://www.wallpaperup.com/uploads/wallpapers/2012/07/04/5256/big_thumb_690cf657788ea89a9ecabc258a0388f1.jpg" id="full-screen-background-image" />
+
+
+     <div class="jumbotron">
+<!--       <div class="container"> -->
+      <!-- <h1>HoodCult</h1> -->
+      <h3>Culture Localized. City-by-City. Neighborhood-by-Neighborhood.</h3>
+      <p>HoodCulture spotlights the literature, music, and movies that define the nation's greatest cities and neigborhoods. Whether you're travelling or just want to get a better feel for the place you call home, HoodCulture lets you know what's happening and what happened.</p>
+      <!--<p><strong>To get started, just choose your city below.</strong></p> -->
+<!--       </div> -->
+    </div>
+
+      <% @city_list.each do |city| %>
+        <div class="col-sm-6 col-md-4">
+          <div class="hovereffects2">
+            <a href="/<%= city.name %>"><div id= "opacity3" class="thumbnail" align="center">
+            <img src=<%= city.small_image_url %>>
+              <div class="caption">
+              <h4><%= city.name %></h4>
+              </div>
+            </div></a>
+          </div>
+        </div>
+      <% end %>
+
+    </body>

@@ -1,0 +1,82 @@
+## To separate Books, Movies, and Music, use this code instead.  Appropriate actions are commented out in controller.
+
+h4><strong>LITERATURE</strong></h4>
+<div id="ca-container" class="ca-container">
+
+  <div class="ca-wrapper">
+  <% @books.each do |listing| %>
+    <div class="ca-item ca-item-1">
+     <div class="ca-item-main">
+      <div class="hovereffects2">
+        <a href="/<%= listing.city.name %>/<%= listing.neighborhood.name %>/<%= listing.id %>">
+        <div id= "opacity3" class="thumbnail" align="center">
+          <h4><%= listing.entry %></h4>
+          <img src=<%= listing.image_url %> width="250px" height="250px">
+           <div class="caption">
+              <p align="left" ><%= listing.short_description %> <br>
+              <br>
+              <em><%= listing.street_address %></em></p>
+           </div>
+        </div>
+        </a>
+      </div>
+     </div>
+    </div>
+  <%end%>
+  </div>
+</div>
+
+
+<h4><strong>MUSIC</strong></h4>
+<div id="ca-container" class="ca-container">
+
+  <div class="ca-wrapper">
+  <% @music.each do |listing| %>
+    <div class="ca-item ca-item-1">
+     <div class="ca-item-main">
+      <div class="hovereffects2">
+        <a href="/<%= listing.city.name %>/<%= listing.neighborhood.name %>/<%= listing.id %>">
+        <div id= "opacity3" class="thumbnail" align="center">
+          <h4><%= listing.entry %></h4>
+          <img src=<%= listing.image_url %> width="270px" height="270px">
+           <div class="caption">
+              <p align="left" ><%= listing.short_description %> <br>
+              <br>
+              <em><%= listing.street_address %></em></p>
+           </div>
+        </div>
+        </a>
+      </div>
+     </div>
+    </div>
+  <%end%>
+  </div>
+</div>
+
+<div class ="row"></div>
+<h6>movies . . . </h6>
+<div id="ca-container" class="ca-container">
+
+  <div class="ca-wrapper">
+  <% @movies.each do |listing| %>
+    <div class="ca-item ca-item-1">
+     <div class="ca-item-main">
+      <div class="hovereffects2">
+        <a href="/<%= listing.city.name %>/<%= listing.neighborhood.name %>/<%= listing.id %>">
+        <div id= "opacity3" class="thumbnail" align="center">
+          <h4><%= listing.entry %></h4>
+          <img src=<%= listing.image_url %> width="270px" height="270px">
+           <div class="caption">
+              <p align="left" ><%= listing.short_description %> <br>
+              <br>
+              <em><%= listing.street_address %></em></p>
+           </div>
+        </div>
+        </a>
+      </div>
+     </div>
+    </div>
+  <%end%>
+  </div>
+</div>
+

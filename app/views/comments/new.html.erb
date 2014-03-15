@@ -1,0 +1,24 @@
+
+
+  <% if session[:user_id].present? %>
+  <div class ="boxed col-md-12">
+    <form class="form-signin" role="form" action="/comments/create" >
+      <h4>Comment Form</h4>
+        <input name="listing_id" value=<%= @listing.id %> type="hidden">
+        <div class="form-group">
+          <label class="control-label">Comment:</label>
+          <input name="body" type="text" class="form-control input-md"
+          rows="6" placeholder="Write your comment here ...">
+        </div>
+        <input type="submit" class="btn btn-md btn-success" value="Submit Comment">
+    </form>
+  <% else %>
+      <a href="/login" class="btn btn-primary btn-md">Sign In To Write a Review.</a>
+  <% end %>
+</div>
+
+
+
+
+<img alt="full screen background image" src="http://i138.photobucket.com/albums/q248/uthpastor06/Bricks.jpg" id="full-screen-background-image" />
+

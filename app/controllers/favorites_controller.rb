@@ -15,6 +15,7 @@ def create
     redirect_to session.delete(:return_to), notice: "This listing has been added to your Favorites"
 end
 
+
 def show
     @favorites = Favorite.find_by(:user_id => session[:user_id])
     @favorites_list = Listing.where(:id => @favorites.listing_id)

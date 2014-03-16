@@ -8,6 +8,12 @@ user_list = [ { :first_name => "Matthew",
                 :email_address => "matthew.venzon@gmail.com",
                 :password => "HoodCulture",
                 :hometown => "Chicago"
+              },
+              { :first_name => "Jeff",
+                :last_name => "Cohen",
+                :email_address => "j-cohen@kellogg.northwestern.edu",
+                :password => "hockey",
+                :hometown => "Chicago"
               }
             ]
 
@@ -372,7 +378,7 @@ listing_list =  [ { :entry => "The White Horse Tavern",
                     :image_url_2 => "TBD",
                     :short_description => "John Cale's apartment where the band wrote their debut album",
                     :long_description => "<p>When Lou Reed met John Cale, a fellow founding member of The Velvet Underground, Cale was living in this apartment on Ludlow Street in New York's Lower East Side. Victor Bockris, who wrote a biography of Reed, described the space as a ‘bohemian slum dwelling’.  This dwelling is where Reed, Cale and Sterling Morrison rehearsed and recorded six songs in 1965, creating the foundation of their first album The Velvet Underground and Nico. </p>
-                                          <p>In 2013, John Cale discussed the apartment in <a href=http://online.wsj.com/news/articles/SB10001424127887323596204578241620759540276> and interview with the Wall Street Journal.</a></p>",
+                                          <p>In 2013, John Cale discussed the apartment in <a href=http://online.wsj.com/news/articles/SB10001424127887323596204578241620759540276> an interview with the Wall Street Journal.</a></p>",
                   },
                   { :entry => "Lush Life",
                     :street_address => "131 Rivington Street",

@@ -35,7 +35,7 @@ City.destroy_all
 
 city_list = [ { :name => "Manhattan",
                 :small_image_url => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsxrmwKVMypGTzk3iaQaf9AwEMhtA8HXGd0xBkWTGHjH72wrt",
-                :large_image_url => "http://hdwallpapercollection.com/wp-content/uploads/2013/06/new-york-city-wallpapers.jpg"
+                :large_image_url => "http://www.iwallpapersfive.com/wp-content/uploads/2013/10/new-york-black-and-white-skyline-photography-skyline-buildings-black-and-white-hd-wallpapers-in-skyline.jpg"
               },
               { :name => "Brooklyn",
                 :small_image_url => "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTn8G0XWfXpH5zsQhH5MzjgHxEsoMoy9vrMoc3SMxJPZ7FuJQcn",
